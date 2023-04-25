@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		471F4D8029F30E4E0072DF58 /* EditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F4D7F29F30E4E0072DF58 /* EditMemberViewController.swift */; };
+		47878C7329F1A40500546E3C /* hipo.json in Resources */ = {isa = PBXBuildFile; fileRef = 47878C7229F1A40500546E3C /* hipo.json */; };
+		4791A78829F5C0CC00BD83F0 /* SortMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791A78729F5C0CC00BD83F0 /* SortMemberTableViewCell.swift */; };
+		4791A78A29F5C0F600BD83F0 /* SortMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791A78929F5C0F600BD83F0 /* SortMemberViewController.swift */; };
+		47C56CDF29F0285B0053B0C1 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C56CDE29F0285B0053B0C1 /* RepoTableViewCell.swift */; };
+		47C56CE129F030700053B0C1 /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C56CE029F030700053B0C1 /* RepoDetail.swift */; };
+		47C56CE329F043A30053B0C1 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C56CE229F043A30053B0C1 /* AddNewMemberViewController.swift */; };
+		47C56CE529F0796D0053B0C1 /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C56CE429F0796D0053B0C1 /* MembersTableViewCell.swift */; };
+		47F8501229EAF5BA000934D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8501129EAF5BA000934D9 /* AppDelegate.swift */; };
+		47F8501429EAF5BA000934D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8501329EAF5BA000934D9 /* SceneDelegate.swift */; };
+		47F8501629EAF5BA000934D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8501529EAF5BA000934D9 /* ViewController.swift */; };
+		47F8501929EAF5BA000934D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F8501729EAF5BA000934D9 /* Main.storyboard */; };
+		47F8501C29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47F8501A29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodeld */; };
+		47F8501E29EAF5BB000934D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F8501D29EAF5BB000934D9 /* Assets.xcassets */; };
+		47F8502129EAF5BB000934D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F8501F29EAF5BB000934D9 /* LaunchScreen.storyboard */; };
+		47F8502929EAF64D000934D9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8502829EAF64D000934D9 /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		471F4D7F29F30E4E0072DF58 /* EditMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemberViewController.swift; sourceTree = "<group>"; };
+		47878C7229F1A40500546E3C /* hipo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hipo.json; sourceTree = "<group>"; };
+		4791A78729F5C0CC00BD83F0 /* SortMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMemberTableViewCell.swift; sourceTree = "<group>"; };
+		4791A78929F5C0F600BD83F0 /* SortMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMemberViewController.swift; sourceTree = "<group>"; };
+		47C56CDE29F0285B0053B0C1 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		47C56CE029F030700053B0C1 /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
+		47C56CE229F043A30053B0C1 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
+		47C56CE429F0796D0053B0C1 /* MembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
+		47F8500E29EAF5BA000934D9 /* HipoLabsIOSAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoLabsIOSAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47F8501129EAF5BA000934D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47F8501329EAF5BA000934D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		47F8501529EAF5BA000934D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47F8501829EAF5BA000934D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47F8501B29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HipoLabsIOSAssignment.xcdatamodel; sourceTree = "<group>"; };
+		47F8501D29EAF5BB000934D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47F8502029EAF5BB000934D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47F8502229EAF5BB000934D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47F8502829EAF64D000934D9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4CD5B20D29F7C95E00CA2AF1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4CD5B20E29F7C95E00CA2AF1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47F8500B29EAF5BA000934D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47F8500529EAF5BA000934D9 = {
+			isa = PBXGroup;
+			children = (
+				47F8501029EAF5BA000934D9 /* HipoLabsIOSAssignment */,
+				47F8500F29EAF5BA000934D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47F8500F29EAF5BA000934D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47F8500E29EAF5BA000934D9 /* HipoLabsIOSAssignment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47F8501029EAF5BA000934D9 /* HipoLabsIOSAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				47F8501129EAF5BA000934D9 /* AppDelegate.swift */,
+				47F8501329EAF5BA000934D9 /* SceneDelegate.swift */,
+				47F8501529EAF5BA000934D9 /* ViewController.swift */,
+				47F8502829EAF64D000934D9 /* DetailViewController.swift */,
+				47C56CE229F043A30053B0C1 /* AddNewMemberViewController.swift */,
+				471F4D7F29F30E4E0072DF58 /* EditMemberViewController.swift */,
+				4791A78929F5C0F600BD83F0 /* SortMemberViewController.swift */,
+				47F8501729EAF5BA000934D9 /* Main.storyboard */,
+				47F8501D29EAF5BB000934D9 /* Assets.xcassets */,
+				47F8501F29EAF5BB000934D9 /* LaunchScreen.storyboard */,
+				47F8502229EAF5BB000934D9 /* Info.plist */,
+				47F8501A29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodeld */,
+				47C56CE429F0796D0053B0C1 /* MembersTableViewCell.swift */,
+				4791A78729F5C0CC00BD83F0 /* SortMemberTableViewCell.swift */,
+				47C56CDE29F0285B0053B0C1 /* RepoTableViewCell.swift */,
+				47C56CE029F030700053B0C1 /* RepoDetail.swift */,
+				47878C7229F1A40500546E3C /* hipo.json */,
+			);
+			path = HipoLabsIOSAssignment;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47F8500D29EAF5BA000934D9 /* HipoLabsIOSAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47F8502529EAF5BB000934D9 /* Build configuration list for PBXNativeTarget "HipoLabsIOSAssignment" */;
+			buildPhases = (
+				47F8500A29EAF5BA000934D9 /* Sources */,
+				47F8500B29EAF5BA000934D9 /* Frameworks */,
+				47F8500C29EAF5BA000934D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HipoLabsIOSAssignment;
+			productName = HipoLabsIOSAssignment;
+			productReference = 47F8500E29EAF5BA000934D9 /* HipoLabsIOSAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47F8500629EAF5BA000934D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					47F8500D29EAF5BA000934D9 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 47F8500929EAF5BA000934D9 /* Build configuration list for PBXProject "HipoLabsIOSAssignment" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 47F8500529EAF5BA000934D9;
+			productRefGroup = 47F8500F29EAF5BA000934D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47F8500D29EAF5BA000934D9 /* HipoLabsIOSAssignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47F8500C29EAF5BA000934D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F8502129EAF5BB000934D9 /* LaunchScreen.storyboard in Resources */,
+				47878C7329F1A40500546E3C /* hipo.json in Resources */,
+				47F8501E29EAF5BB000934D9 /* Assets.xcassets in Resources */,
+				47F8501929EAF5BA000934D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47F8500A29EAF5BA000934D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F8501C29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodeld in Sources */,
+				4791A78829F5C0CC00BD83F0 /* SortMemberTableViewCell.swift in Sources */,
+				47F8501629EAF5BA000934D9 /* ViewController.swift in Sources */,
+				47C56CE329F043A30053B0C1 /* AddNewMemberViewController.swift in Sources */,
+				47C56CE529F0796D0053B0C1 /* MembersTableViewCell.swift in Sources */,
+				471F4D8029F30E4E0072DF58 /* EditMemberViewController.swift in Sources */,
+				47F8502929EAF64D000934D9 /* DetailViewController.swift in Sources */,
+				47F8501229EAF5BA000934D9 /* AppDelegate.swift in Sources */,
+				4791A78A29F5C0F600BD83F0 /* SortMemberViewController.swift in Sources */,
+				47F8501429EAF5BA000934D9 /* SceneDelegate.swift in Sources */,
+				47C56CE129F030700053B0C1 /* RepoDetail.swift in Sources */,
+				47C56CDF29F0285B0053B0C1 /* RepoTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47F8501729EAF5BA000934D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47F8501829EAF5BA000934D9 /* Base */,
+				4CD5B20D29F7C95E00CA2AF1 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47F8501F29EAF5BB000934D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47F8502029EAF5BB000934D9 /* Base */,
+				4CD5B20E29F7C95E00CA2AF1 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47F8502329EAF5BB000934D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47F8502429EAF5BB000934D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47F8502629EAF5BB000934D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG329DBAXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HipoLabsIOSAssignment/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cengizhantomak.HipoLabsIOSAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47F8502729EAF5BB000934D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG329DBAXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HipoLabsIOSAssignment/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cengizhantomak.HipoLabsIOSAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47F8500929EAF5BA000934D9 /* Build configuration list for PBXProject "HipoLabsIOSAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47F8502329EAF5BB000934D9 /* Debug */,
+				47F8502429EAF5BB000934D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47F8502529EAF5BB000934D9 /* Build configuration list for PBXNativeTarget "HipoLabsIOSAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47F8502629EAF5BB000934D9 /* Debug */,
+				47F8502729EAF5BB000934D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47F8501A29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47F8501B29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodel */,
+			);
+			currentVersion = 47F8501B29EAF5BA000934D9 /* HipoLabsIOSAssignment.xcdatamodel */;
+			path = HipoLabsIOSAssignment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47F8500629EAF5BA000934D9 /* Project object */;
+}

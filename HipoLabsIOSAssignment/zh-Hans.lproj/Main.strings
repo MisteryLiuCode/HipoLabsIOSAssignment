@@ -1,0 +1,120 @@
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "0UU-Nc-DUz"; */
+"0UU-Nc-DUz.text" = "Followers";
+
+/* Class = "UIButton"; configuration.title = "EDIT"; ObjectID = "21g-d5-KWZ"; */
+"21g-d5-KWZ.configuration.title" = "EDIT";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "21g-d5-KWZ"; */
+"21g-d5-KWZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "ADD"; ObjectID = "5Ky-iG-vc2"; */
+"5Ky-iG-vc2.configuration.title" = "ADD";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Ky-iG-vc2"; */
+"5Ky-iG-vc2.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Name Surname"; ObjectID = "5Lj-m9-dla"; */
+"5Lj-m9-dla.placeholder" = "Name Surname";
+
+/* Class = "UIButton"; configuration.title = "BACK"; ObjectID = "6Yi-Pt-XRW"; */
+"6Yi-Pt-XRW.configuration.title" = "BACK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6Yi-Pt-XRW"; */
+"6Yi-Pt-XRW.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Name Surname"; ObjectID = "81K-1s-6cC"; */
+"81K-1s-6cC.text" = "Name Surname";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "8yq-Ia-FWy"; */
+"8yq-Ia-FWy.placeholder" = "Search";
+
+/* Class = "UISearchBar"; 8yq-Ia-FWy.scopeButtonTitles[0] = "Title"; ObjectID = "8yq-Ia-FWy"; */
+"8yq-Ia-FWy.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; 8yq-Ia-FWy.scopeButtonTitles[1] = "Title"; ObjectID = "8yq-Ia-FWy"; */
+"8yq-Ia-FWy.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "A0t-0F-YW1"; */
+"A0t-0F-YW1.text" = "Date";
+
+/* Class = "UILabel"; text = "9999"; ObjectID = "HXA-L1-X88"; */
+"HXA-L1-X88.text" = "9999";
+
+/* Class = "UITextField"; placeholder = "Position"; ObjectID = "McP-vi-WVq"; */
+"McP-vi-WVq.placeholder" = "Position";
+
+/* Class = "UITextField"; placeholder = "GitHub Username"; ObjectID = "Npr-wU-8IM"; */
+"Npr-wU-8IM.placeholder" = "GitHub Username";
+
+/* Class = "UILabel"; text = "Position"; ObjectID = "Q2Z-GY-gaK"; */
+"Q2Z-GY-gaK.text" = "Position";
+
+/* Class = "UITextField"; placeholder = "Years İn Hipo"; ObjectID = "Sht-LR-iQN"; */
+"Sht-LR-iQN.placeholder" = "Years İn Hipo";
+
+/* Class = "UIButton"; configuration.title = "BACK"; ObjectID = "Y2a-mh-V37"; */
+"Y2a-mh-V37.configuration.title" = "BACK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y2a-mh-V37"; */
+"Y2a-mh-V37.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Members"; ObjectID = "YLh-Kz-sw5"; */
+"YLh-Kz-sw5.title" = "Members";
+
+/* Class = "UIButton"; configuration.title = "SORT MEMBERS"; ObjectID = "YbO-fG-PKQ"; */
+"YbO-fG-PKQ.configuration.title" = "SORT MEMBERS";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YbO-fG-PKQ"; */
+"YbO-fG-PKQ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "ADD NEW MEMBER"; ObjectID = "Yxx-D3-c0b"; */
+"Yxx-D3-c0b.configuration.title" = "ADD NEW MEMBER";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Yxx-D3-c0b"; */
+"Yxx-D3-c0b.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Following"; ObjectID = "ZAy-x1-8h1"; */
+"ZAy-x1-8h1.text" = "Following";
+
+/* Class = "UILabel"; text = "Languages"; ObjectID = "ZJQ-Pp-mQ0"; */
+"ZJQ-Pp-mQ0.text" = "Languages";
+
+/* Class = "UILabel"; text = "New Member"; ObjectID = "ame-Sv-wah"; */
+"ame-Sv-wah.text" = "New Member";
+
+/* Class = "UITextField"; placeholder = "Years İn Hipo"; ObjectID = "bM4-j8-WRq"; */
+"bM4-j8-WRq.placeholder" = "Years İn Hipo";
+
+/* Class = "UILabel"; text = "Edit Member"; ObjectID = "dmD-4p-BNo"; */
+"dmD-4p-BNo.text" = "Edit Member";
+
+/* Class = "UILabel"; text = "Sort Member"; ObjectID = "e43-Fy-PaY"; */
+"e43-Fy-PaY.text" = "Sort Member";
+
+/* Class = "UILabel"; text = "Repo Name"; ObjectID = "epU-fV-rQb"; */
+"epU-fV-rQb.text" = "Repo Name";
+
+/* Class = "UILabel"; text = ",  9999 years"; ObjectID = "haj-8A-7m7"; */
+"haj-8A-7m7.text" = ",  9999 years";
+
+/* Class = "UINavigationItem"; title = "Name"; ObjectID = "lii-S3-g6y"; */
+"lii-S3-g6y.title" = "Name";
+
+/* Class = "UITextField"; placeholder = "Position"; ObjectID = "mKo-Hq-uMa"; */
+"mKo-Hq-uMa.placeholder" = "Position";
+
+/* Class = "UITextField"; placeholder = "Name Surname"; ObjectID = "okx-Wl-tf7"; */
+"okx-Wl-tf7.placeholder" = "Name Surname";
+
+/* Class = "UITextField"; placeholder = "GitHub Username"; ObjectID = "sW9-zu-DDD"; */
+"sW9-zu-DDD.placeholder" = "GitHub Username";
+
+/* Class = "UILabel"; text = "Repositories"; ObjectID = "vHy-R6-HwY"; */
+"vHy-R6-HwY.text" = "Repositories";
+
+/* Class = "UIButton"; configuration.title = "BACK"; ObjectID = "xDc-ab-RRM"; */
+"xDc-ab-RRM.configuration.title" = "BACK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xDc-ab-RRM"; */
+"xDc-ab-RRM.normalTitle" = "Button";
