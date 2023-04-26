@@ -10,10 +10,13 @@ import UIKit
 class MembersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var view: UIView!
+    //名称label
     @IBOutlet weak var nameLabel: UILabel!
+    //地点label
     @IBOutlet weak var positionLabel: UILabel!
+    //年label
     @IBOutlet weak var yearsLabel: UILabel!
-    
+    //背景色
     var originalBackgroundColor: UIColor?
     
     override func awakeFromNib() {

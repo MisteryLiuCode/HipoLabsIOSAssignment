@@ -202,7 +202,7 @@
             </objects>
             <point key="canvasLocation" x="1620.6106870229007" y="-27.464788732394368"/>
         </scene>
-        <!--Members-->
+        <!--下车提醒-->
         <scene sceneID="wj3-37-TgF">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="dUt-kS-hAT" customClass="ViewController" customModule="HipoLabsIOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,7 +244,7 @@
                                     <action selector="sortMembersButton:" destination="dUt-kS-hAT" eventType="touchUpInside" id="0F0-9p-ISf"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="8yq-Ia-FWy">
+                            <searchBar contentMode="redraw" placeholder="输入地点" translatesAutoresizingMaskIntoConstraints="NO" id="8yq-Ia-FWy">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
@@ -345,7 +345,7 @@
                             <constraint firstItem="qbA-MF-Zs4" firstAttribute="trailing" secondItem="YbO-fG-PKQ" secondAttribute="trailing" constant="45" id="z9H-zg-k6t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Members" id="YLh-Kz-sw5"/>
+                    <navigationItem key="navigationItem" title="下车提醒" id="YLh-Kz-sw5"/>
                     <connections>
                         <outlet property="addMemberButton" destination="Yxx-D3-c0b" id="Aid-e9-JMb"/>
                         <outlet property="membersTableView" destination="Hbr-SP-p9n" id="nPU-rQ-wO6"/>
@@ -388,7 +388,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAI-qi-7Ts">
                                 <rect key="frame" x="16" y="255" width="361" height="51"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name Surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="okx-Wl-tf7">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="地点名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="okx-Wl-tf7">
                                         <rect key="frame" x="53" y="16.333333333333314" width="300" height="18.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Jfn-Gh-bWY"/>
@@ -416,8 +416,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-P3-nHJ">
                                 <rect key="frame" x="16" y="321" width="361" height="51"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="GitHub Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npr-wU-8IM">
-                                        <rect key="frame" x="53" y="16.333333333333314" width="300" height="18.666666666666671"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="提醒半径(m)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npr-wU-8IM">
+                                        <rect key="frame" x="53" y="16" width="300" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Bpt-2V-dS1"/>
                                         </constraints>
@@ -444,7 +444,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQx-Ge-Ca1">
                                 <rect key="frame" x="16" y="387" width="361" height="51"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Position" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKo-Hq-uMa">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="经纬度信息" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKo-Hq-uMa">
                                         <rect key="frame" x="53" y="16.333333333333314" width="300" height="18.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="ldi-Ns-L96"/>
@@ -472,7 +472,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-aB-ObB">
                                 <rect key="frame" x="16" y="453" width="361" height="51"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Years İn Hipo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-j8-WRq">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="预留字段" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-j8-WRq">
                                         <rect key="frame" x="53" y="16.333333333333314" width="300" height="18.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="iKv-vG-gP1"/>

@@ -13,12 +13,16 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 class ViewController: UIViewController {
     
+    //tableView用于展示下拉框
     @IBOutlet weak var membersTableView: UITableView!
+    //搜索框
     @IBOutlet weak var searchBar: UISearchBar!
+    //添加按钮
     @IBOutlet weak var addMemberButton: UIButton!
     
     let context = appDelegate.persistentContainer.viewContext
     
+    //创建数组
     var memberList = [Members]()
     var hipoList = [Hipo]()
     

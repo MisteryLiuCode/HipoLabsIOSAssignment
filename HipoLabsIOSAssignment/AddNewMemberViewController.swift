@@ -62,7 +62,7 @@ class AddNewMemberViewController: UIViewController {
         }
         
         if !isInternetAvailable() {
-            let alert = UIAlertController(title: "Warning", message: "No internet connection.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "提示", message: "没有互联网连接", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -91,6 +91,7 @@ class AddNewMemberViewController: UIViewController {
         view.endEditing(true)
     }
     
+    //网络是否可用
     func isInternetAvailable() -> Bool {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
@@ -111,17 +112,19 @@ class AddNewMemberViewController: UIViewController {
         return (isReachable && !needsConnection)
     }
     
+    //返回
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //添加按钮,调用接口添加
     @IBAction func addButton(_ sender: Any) {
-        
+        //校验字段
         guard Int(yearsText.text!) != nil else {
             showAlert(title: "Error", message: "Please enter a valid number for years.")
             return
         }
-        
+        //校验字段
         guard let githubUser = githubText.text, !githubUser.isEmpty else {
             showAlert(title: "Error", message: "Please enter GitHub Username.")
             return
