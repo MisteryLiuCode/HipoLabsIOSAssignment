@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import SystemConfiguration
+import Alamofire
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -19,6 +20,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     //添加按钮
     @IBOutlet weak var addMemberButton: UIButton!
+    
+    // 定义User对象
+    struct Res<T: Decodable>: Decodable{
+        let retCode: String
+        let retMsg: String
+        let busBody: T
+    }
     
     let context = appDelegate.persistentContainer.viewContext
     
@@ -50,12 +58,13 @@ class ViewController: UIViewController {
         searchBar.showsScopeBar = false
         searchBar.sizeToFit()
         searchBar.scopeButtonTitles = ["Member", "Position"]
-        
         jsonToData()
+        //保存用户id信息
+        saveUserId()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-                
+        
         if isSearching {
             searchContent(text: textSearch!)
         }else{
@@ -136,9 +145,9 @@ class ViewController: UIViewController {
             if memberData.count == 0 {
                 
                 let newCompany = Team(context: context)
-                    newCompany.company = dictionary["company"] as? String
-                    newCompany.team = dictionary["team"] as? String
-
+                newCompany.company = dictionary["company"] as? String
+                newCompany.team = dictionary["team"] as? String
+                
                 print("comp: \(newCompany.company ?? "")")
                 
                 for member in members {
@@ -251,10 +260,10 @@ class ViewController: UIViewController {
         self.present(sortMemberVC!, animated: true, completion: nil)
     }
     
-//    @IBAction func addNewMemberButton(_ sender: Any) {
-//        performSegue(withIdentifier: "toAddMembersVC", sender: nil)
-//
-//    }
+    //    @IBAction func addNewMemberButton(_ sender: Any) {
+    //        performSegue(withIdentifier: "toAddMembersVC", sender: nil)
+    //
+    //    }
     
 }
 
@@ -293,10 +302,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let member = self.memberList[indexPath.row]
             self.context.delete(member)
             appDelegate.saveContext()
-                        
+            
             if self.isSearching {
                 self.searchContent(text: self.textSearch!)
-
+                
             }else{
                 self.getMembersData()
             }
@@ -323,12 +332,12 @@ extension ViewController: UISearchBarDelegate {
         textSearch = searchText
         
         if searchText.isEmpty {
-                isSearching = false
-                getMembersData()
-            } else {
-                isSearching = true
-                searchContent(text: textSearch!)
-            }
+            isSearching = false
+            getMembersData()
+        } else {
+            isSearching = true
+            searchContent(text: textSearch!)
+        }
         
         membersTableView.reloadData()
     }
@@ -365,6 +374,31 @@ extension ViewController: UISearchBarDelegate {
             
         } else {
             return
+        }
+    }
+    
+    func saveUserId(){
+        if let myId = UserDefaults.standard.string(forKey: "myId") {
+            print("生成的id: \(myId)")
+            let userReq: Parameters = [
+                "userId": myId,
+            ]
+            
+            // 发送POST请求
+            AF.request("http://\(kHost):\(kPort)/saveUserInfo", method: .post, parameters: userReq)
+                .responseJSON { response in
+                    
+                    if case .success(let value) = response.result {
+                        if let json = value as? [String: Any],
+                           let responseData = try? JSONDecoder().decode(Res<String>.self, from: JSONSerialization.data(withJSONObject: json)) {
+                            // 获取response data
+                            let errorCode = responseData.retCode
+                            let message = responseData.retMsg
+                            let saveStatus = responseData.busBody
+                            print("保存用户id状态：\(saveStatus)")
+                        }
+                    }
+                }
         }
     }
     
