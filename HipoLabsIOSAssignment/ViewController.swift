@@ -9,10 +9,16 @@ import UIKit
 import CoreData
 import SystemConfiguration
 import Alamofire
+import CoreLocation
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 class ViewController: UIViewController {
+    
+    var locationManager: CLLocationManager?
+    
+    var myCurrentLocation: CLLocationCoordinate2D?
+    var updatingLocationValue : CLLocationCoordinate2D?
     
     //tableView用于展示下拉框
     @IBOutlet weak var membersTableView: UITableView!
@@ -45,6 +51,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //获取用户位置
+        getUserLocation()
         
         refreshControl.addTarget(self, action: #selector(refreshList(_:)), for: .valueChanged)
         membersTableView.refreshControl = refreshControl
@@ -399,6 +407,35 @@ extension ViewController: UISearchBarDelegate {
                         }
                     }
                 }
+        }else{
+            let uniqueId = UUID().uuidString
+            UserDefaults.standard.set(uniqueId, forKey: "myId")
+            saveUserId()
+        }
+    }
+    
+    //获取位置权限
+    func getUserLocation() {
+        locationManager = CLLocationManager()
+        
+        switch locationManager?.authorizationStatus {
+        case .denied , .restricted:
+//            delegate?.presentError("Oh no!", subHeading: "请允许我获取位置信息")
+            break
+        case .notDetermined:
+            // Ask for Authorisation from the User.
+            self.locationManager?.requestAlwaysAuthorization()
+            // For use in foreground
+            self.locationManager?.requestWhenInUseAuthorization()
+            break
+        default:
+            break
+        }
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager?.startUpdatingLocation()
+            locationManager?.allowsBackgroundLocationUpdates = true
         }
     }
     
@@ -416,4 +453,18 @@ extension String {
         return count
     }
     
+}
+extension ViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.updatingLocationValue = locValue
+        guard let unwrappedLocation = myCurrentLocation else {
+            myCurrentLocation = locValue
+            return
+        }
+        //get distance between locValue and myCurrentLocation
+        let currentCoordinates = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        let previousCoordinates = CLLocation(latitude: unwrappedLocation.latitude, longitude: unwrappedLocation.longitude)
+        let distance = currentCoordinates.distance(from: previousCoordinates)
+    }
 }

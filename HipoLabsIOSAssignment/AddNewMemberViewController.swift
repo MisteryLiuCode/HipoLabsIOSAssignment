@@ -8,7 +8,8 @@
 import UIKit
 import CoreData
 import SystemConfiguration
-
+import CoreLocation
+import Alamofire
 class AddNewMemberViewController: UIViewController {
     
     @IBOutlet weak var nameView: UIView!
@@ -16,18 +17,40 @@ class AddNewMemberViewController: UIViewController {
     @IBOutlet weak var PositionView: UIView!
     @IBOutlet weak var YearsView: UIView!
     
+    //地点名称
     @IBOutlet weak var nameText: UITextField!
+    //提醒半径
     @IBOutlet weak var githubText: UITextField!
+    //经纬度信息
     @IBOutlet weak var positionText: UITextField!
+    //预留字段
     @IBOutlet weak var yearsText: UITextField!
     
     @IBOutlet weak var addButtonOutlet: UIButton!
+    
+    var locationManager: CLLocationManager?
+    var myCurrentLocation: CLLocationCoordinate2D?
+    var updatingLocationValue : CLLocationCoordinate2D?
+    let userId=getUserId();
+    
+    @IBAction func desLocationBt(_ sender: Any) {
+        print("点击位置获取")
+        //0:更新家方向地铁下车位置 1:获取上班方向地铁下车位置
+        guard let unwrappedLocation = updatingLocationValue else { return }
+        let latitude=unwrappedLocation.latitude
+        let longitude=unwrappedLocation.longitude
+        print("获取的位置为：\(longitude),\(latitude)")
+        positionText!.text="\(longitude),\(latitude)"
+        textFieldDidChange()
+    }
+    
     
     let context = appDelegate.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //获取用户位置
+        getUserLocation()
         nameView.layer.cornerRadius = 8
         githubView.layer.cornerRadius = 8
         PositionView.layer.cornerRadius = 8
@@ -81,7 +104,7 @@ class AddNewMemberViewController: UIViewController {
         
         if isInternetAvailable() {
             addButtonOutlet.isEnabled = true
-
+            
         } else {
             addButtonOutlet.isEnabled = false
         }
@@ -130,56 +153,47 @@ class AddNewMemberViewController: UIViewController {
             return
         }
         
-        let urlString = "https://api.github.com/users/\(githubUser)"
-        
-        guard let url = URL(string: urlString) else {
-            showAlert(title: "Error", message: "Invalid URL.")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            guard let data = data, error == nil else {
-                self.showAlert(title: "Error", message: "No data received.")
-                return
-            }
-            
-            do {
-                let result = try JSONDecoder().decode(MyResponse.self, from: data)
-                
-                if result.login.lowercased() == githubUser.lowercased() {
-                    DispatchQueue.main.async {
-                        
-                        let addMember = Members(context: self.context)
-                        addMember.name = self.nameText.text
-                        addMember.github = self.githubText.text
-                        
-                        let addHipo = Hipo(context: self.context)
-                        addMember.hipo = addHipo
-                        addHipo.position = self.positionText.text
-                        if let years = Int32(self.yearsText.text!) {
-                            addHipo.years = years
-                            
+        //发送请求，保存信息
+        let saveLocationReq: Parameters = [
+            "userId": userId,
+            "locationDesCn": nameText.text!,
+            "locationDes": positionText.text!,
+        ]
+        AF.request("http://\(kHost):\(kPort)/saveLocation", method: .post, parameters: saveLocationReq)
+            .responseJSON { response in
+                if case .success(let value) = response.result {
+                    if let json = value as? [String: Any],
+                       let responseData = try? JSONDecoder().decode(Res<Int>.self, from: JSONSerialization.data(withJSONObject: json)) {
+                        // 获取response data
+                        if responseData.retCode=="0000"{
+                            let saveResult = responseData.busBody
+                            print("保存位置状态：\(saveResult)")
+                            if(saveResult==1){
+                                let addMember = Members(context: self.context)
+                                addMember.name = self.nameText.text
+                                addMember.github = self.githubText.text
+                                
+                                let addHipo = Hipo(context: self.context)
+                                addMember.hipo = addHipo
+                                addHipo.position = self.positionText.text
+                                if let years = Int32(self.yearsText.text!) {
+                                    addHipo.years = years
+                                    
+                                }
+                                
+                                appDelegate.saveContext()
+                                
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                            //                            if(distance==0){
+                            //                                self.delegate?.updateDestination("距离目的地:请先采集位置信息")
+                            //                            }else{
+                            //                                self.delegate?.updateDestination("距离目的地:\(distance as! Double/1000)千米")
+                            //                            }
                         }
-
-                        appDelegate.saveContext()
-                        
-                        self.dismiss(animated: true, completion: nil)
                     }
-                    
-                } else {
-                    DispatchQueue.main.async {
-                        self.showAlert(title: "Error", message: "Username does not match.")
-                    }
-                }
-                
-            } catch {
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Error", message: "Username not found.")
                 }
             }
-        }
-        task.resume()
     }
     
     func showAlert(title: String, message: String) {
@@ -193,5 +207,27 @@ class AddNewMemberViewController: UIViewController {
     struct MyResponse: Codable {
         let login: String
     }
+    //初始化位置权限
+    func getUserLocation() {
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.startUpdatingLocation()
+    }
     
+    
+}
+extension AddNewMemberViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.updatingLocationValue = locValue
+        guard let unwrappedLocation = myCurrentLocation else {
+            myCurrentLocation = locValue
+            return
+        }
+        //get distance between locValue and myCurrentLocation
+        let currentCoordinates = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
+        let previousCoordinates = CLLocation(latitude: unwrappedLocation.latitude, longitude: unwrappedLocation.longitude)
+        let distance = currentCoordinates.distance(from: previousCoordinates)
+    }
 }

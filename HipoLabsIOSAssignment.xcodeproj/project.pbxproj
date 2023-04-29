@@ -24,6 +24,7 @@
 		47F8502129EAF5BB000934D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F8501F29EAF5BB000934D9 /* LaunchScreen.storyboard */; };
 		47F8502929EAF64D000934D9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F8502829EAF64D000934D9 /* DetailViewController.swift */; };
 		4C5A551B29FAB6DF0031D431 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A551A29FAB6DF0031D431 /* Constant.swift */; };
+		4C99B77529FD212100BAE1C7 /* Res.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C99B77429FD212100BAE1C7 /* Res.swift */; };
 		EFC27B9280B96F00C6B18B34 /* Pods_HipoLabsIOSAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70D5E2B31A696C27B92D62F /* Pods_HipoLabsIOSAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		47F8502229EAF5BB000934D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F8502829EAF64D000934D9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4C5A551A29FAB6DF0031D431 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4C99B77429FD212100BAE1C7 /* Res.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Res.swift; sourceTree = "<group>"; };
 		4CD5B20D29F7C95E00CA2AF1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4CD5B20E29F7C95E00CA2AF1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CAAA314B5EFFE1C834DD8BBF /* Pods-HipoLabsIOSAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipoLabsIOSAssignment.release.xcconfig"; path = "Target Support Files/Pods-HipoLabsIOSAssignment/Pods-HipoLabsIOSAssignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		47F8501029EAF5BA000934D9 /* HipoLabsIOSAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				4C99B77429FD212100BAE1C7 /* Res.swift */,
 				4C5A551A29FAB6DF0031D431 /* Constant.swift */,
 				47F8501129EAF5BA000934D9 /* AppDelegate.swift */,
 				47F8501329EAF5BA000934D9 /* SceneDelegate.swift */,
@@ -123,7 +126,6 @@
 				134682F8241EFC35982666FF /* Pods-HipoLabsIOSAssignment.debug.xcconfig */,
 				CAAA314B5EFFE1C834DD8BBF /* Pods-HipoLabsIOSAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -272,6 +274,7 @@
 				47F8501229EAF5BA000934D9 /* AppDelegate.swift in Sources */,
 				4791A78A29F5C0F600BD83F0 /* SortMemberViewController.swift in Sources */,
 				4C5A551B29FAB6DF0031D431 /* Constant.swift in Sources */,
+				4C99B77529FD212100BAE1C7 /* Res.swift in Sources */,
 				47F8501429EAF5BA000934D9 /* SceneDelegate.swift in Sources */,
 				47C56CE129F030700053B0C1 /* RepoDetail.swift in Sources */,
 				47C56CDF29F0285B0053B0C1 /* RepoTableViewCell.swift in Sources */,
@@ -429,6 +432,9 @@
 				DEVELOPMENT_TEAM = SG329DBAXP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HipoLabsIOSAssignment/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许访问您的位置信息";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "请允许访问您的位置信息";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许访问您的位置信息";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -459,6 +465,9 @@
 				DEVELOPMENT_TEAM = SG329DBAXP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HipoLabsIOSAssignment/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "请允许访问您的位置信息";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "请允许访问您的位置信息";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "请允许访问您的位置信息";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
